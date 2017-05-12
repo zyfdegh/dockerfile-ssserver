@@ -1,11 +1,11 @@
-# dockerfile-alpine-shadowsocks
+# dockerfile-ssserver
 
 ## Description
-Dockerfile of shadowsocks based on alpine linux, a lightweight linux distribution.
+Shadowsocks server in Golang.
 
 ## Run
-Note that the container exposed port must be the same with shadowsocks server port.
+Note that the ssserver listenning port must be the same with container exposed port.
 
 ```sh
-docker run -d -p 2016:8388 zyfdedh/shadowsocks:latest -s 0.0.0.0 -p 8388 -k $PASSWORD -m aes-256-cfb
+docker run -d -p 2016:8388 zyfdedh/ssserver:latest -s 0.0.0.0 -p 8388 -k $PASSWORD -m aes-256-cfb
 ```
